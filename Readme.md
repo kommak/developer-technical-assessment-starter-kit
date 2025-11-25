@@ -192,35 +192,6 @@ POST /api/auth/register – Register a user
 
 Test Coverage
 92.56% Statements 411/444 71.57% Branches 141/197 98.61% Functions 71/72 92.06% Lines 348/378
-Press n or j to go to the next uncovered block, b, p or k for the previous block.
-
-Filter:  
-File		Statements		Branches		Functions		Lines	
-backend	
-0%	0/2	100%	0/0	100%	0/0	0%	0/2
-backend/src	
-97.72%	43/44	66.66%	4/6	100%	5/5	97.36%	37/38
-backend/src/agent-contacts	
-100%	44/44	77.27%	17/22	100%	5/5	100%	36/36
-backend/src/agent-contacts/dto	
-100%	4/4	100%	0/0	100%	0/0	100%	4/4
-backend/src/auth	
-93.24%	69/74	71.05%	27/38	100%	10/10	92.18%	59/64
-backend/src/auth/dto	
-100%	7/7	100%	0/0	100%	0/0	100%	7/7
-backend/src/database	
-46.8%	22/47	100%	0/0	87.5%	7/8	48.83%	21/43
-backend/src/lands	
-100%	50/50	72.41%	21/29	100%	10/10	100%	42/42
-backend/src/listings	
-100%	28/28	75%	12/16	100%	6/6	100%	22/22
-backend/src/projects	
-100%	50/50	68.96%	20/29	100%	10/10	100%	42/42
-backend/src/properties	
-100%	52/52	68.96%	20/29	100%	10/10	100%	44/44
-backend/src/users	
-100%	42/42	71.42%	20/28	100%	8/8	100%	34/34
-
 
 AI Tools Used
 - ChatGPT (GPT-5 Mini) – help in generating unit and test files,
