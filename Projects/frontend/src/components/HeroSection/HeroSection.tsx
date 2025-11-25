@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const HeroSection: React.FC = () => {
+  const [showInput, setShowInput] = useState(false);
+
+  const handleClick = () => {
+    setShowInput((prev) => !prev); // toggle input visibility
+  };
   return (
     <section
       style={{
@@ -51,10 +56,26 @@ const HeroSection: React.FC = () => {
             cursor: 'pointer',
             boxShadow: '0 2px 6px rgba(0,0,0,0.2)',
           }}
-          type="button"
+           type="button"
+        onClick={handleClick}
         >
           Search
         </button>
+           {showInput && (
+        <input
+          type="text"
+          placeholder="Type your search..."
+          style={{
+            display: 'block',
+            marginTop: 10,
+            padding: '0.5rem 1rem',
+            borderRadius: 4,
+            border: '1px solid #ccc',
+            fontSize: '1rem',
+            width: '100%',
+          }}
+        />
+      )} 
       </div>
     </section>
   );

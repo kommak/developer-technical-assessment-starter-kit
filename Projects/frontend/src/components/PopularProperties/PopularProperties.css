@@ -95,3 +95,51 @@
   fill: currentColor;
   vertical-align: middle;
 }
+
+.property-card {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+.property-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.property-card:hover .property-image {
+  transform: scale(1.05);
+}
+
+.property-info {
+  padding: 12px;
+}
+
+.property-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.property-desc {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 8px 0;
+}
+
+.property-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-weight: 500;
+  color: #007bff;
+}
