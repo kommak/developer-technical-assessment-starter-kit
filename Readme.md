@@ -127,7 +127,7 @@ A NestJS-based backend API for managing real estate listings including **project
 
 1. Clone the repository:
 
-```bash
+bash
 git clone https://github.com/kommak/developer-technical-assessment-starter-kit
 cd projects/backend
 
@@ -223,8 +223,8 @@ backend/src/users
 
 
 AI Tools Used
-- ChatGPT (GPT-5 Mini) – help in generating unit and e2e test files,
-coverage strategies, and documentation support.
+- ChatGPT (GPT-5 Mini) – help in generating unit and test files,
+help in prepare seeding data, and documentation support.
 - Gemeni  – help in generate UI and design the front-end
 
 Notes
