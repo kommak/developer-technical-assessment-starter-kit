@@ -13,6 +13,6 @@ export declare class AuthController {
         updated_at: Date;
     }>;
     login(dto: LoginUserDto): Promise<{
-        access_token: any;
+        access_token: string;
     }>;
 }

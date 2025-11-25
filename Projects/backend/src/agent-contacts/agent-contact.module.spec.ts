@@ -13,7 +13,7 @@ describe('AgentContactModule', () => {
       imports: [AgentContactModule],
     })
       .overrideProvider(getRepositoryToken(AgentContact))
-      .useValue({}) 
+      .useValue({})
       .compile();
   });
 
