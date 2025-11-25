@@ -3,5 +3,5 @@ import { CreateAgentContactDto } from './dto/create-agent-contact.dto';
 export declare class AgentContactController {
     private readonly agentContactService;
     constructor(agentContactService: AgentContactService);
-    createContact(dto: CreateAgentContactDto, req: any): Promise<any>;
+    createContact(dto: CreateAgentContactDto, req: any): Promise<import("./agent-contacts.entity").AgentContact>;
 }

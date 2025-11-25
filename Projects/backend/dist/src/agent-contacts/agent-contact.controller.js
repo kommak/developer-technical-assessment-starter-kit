@@ -11,7 +11,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
-var _a, _b;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AgentContactController = void 0;
 const common_1 = require("@nestjs/common");
@@ -35,11 +34,11 @@ __decorate([
     __param(0, (0, common_1.Body)()),
     __param(1, (0, common_1.Req)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [typeof (_b = typeof create_agent_contact_dto_1.CreateAgentContactDto !== "undefined" && create_agent_contact_dto_1.CreateAgentContactDto) === "function" ? _b : Object, Object]),
+    __metadata("design:paramtypes", [create_agent_contact_dto_1.CreateAgentContactDto, Object]),
     __metadata("design:returntype", Promise)
 ], AgentContactController.prototype, "createContact", null);
 exports.AgentContactController = AgentContactController = __decorate([
     (0, common_1.Controller)('agent-contact'),
-    __metadata("design:paramtypes", [typeof (_a = typeof agent_contact_service_1.AgentContactService !== "undefined" && agent_contact_service_1.AgentContactService) === "function" ? _a : Object])
+    __metadata("design:paramtypes", [agent_contact_service_1.AgentContactService])
 ], AgentContactController);
 //# sourceMappingURL=agent-contact.controller.js.map
