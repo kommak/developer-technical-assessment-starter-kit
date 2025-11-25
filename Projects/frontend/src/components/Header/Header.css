@@ -1,0 +1,90 @@
+/* Header.css */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+  position: relative;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 24px;
+  color: #d87e2f; /* warm orange */
+  user-select: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.contact-button {
+  background: linear-gradient(135deg, #f4a261, #e76f51);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  padding: 8px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  white-space: nowrap;
+}
+
+.contact-button:hover {
+  background: linear-gradient(135deg, #e76f51, #f4a261);
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  width: 25px;
+}
+
+.menu-icon div {
+  height: 3px;
+  background: #d87e2f;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 58px;
+    right: 20px;
+    background: white;
+    flex-direction: column;
+    width: 160px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    border-radius: 12px;
+    padding: 10px 0;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .contact-button {
+    display: none;
+  }
+  .menu-icon {
+    display: flex;
+  }
+}

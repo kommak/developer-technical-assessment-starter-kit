@@ -1,0 +1,97 @@
+/* PopularProperties.css */
+.popular-properties {
+  max-width: 1200px;
+  margin: 2rem auto 4rem;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #111;
+}
+
+.properties-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.property-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.property-image {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.property-info {
+  padding: 1rem 1.25rem 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.property-price {
+  font-size: 1.25rem;
+  color: #0a1f44;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+}
+
+.property-desc {
+  font-size: 1rem;
+  color: #777;
+  margin: 0 0 1.25rem;
+}
+
+.property-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.details-text {
+  font-size: 0.9rem;
+  color: #777;
+  cursor: pointer;
+  user-select: none;
+}
+
+.save-button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: none;
+  border: none;
+  color: #555;
+  font-size: 0.9rem;
+  cursor: pointer;
+  user-select: none;
+  padding: 0;
+}
+
+.save-button:hover {
+  color: #d33;
+}
+
+.heart-icon {
+  fill: currentColor;
+  vertical-align: middle;
+}

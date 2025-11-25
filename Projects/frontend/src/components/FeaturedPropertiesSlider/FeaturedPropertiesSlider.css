@@ -1,0 +1,160 @@
+/* Make slider full width */
+.slider-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 2rem 1.5rem;
+  position: relative;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9f9;
+  border-radius: 0; /* remove rounded corners for full-width look */
+  box-shadow: none; /* remove card shadow */
+}
+
+/* Content layout */
+.slider-content {
+  max-width: 1200px;  /* keep content centered */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  flex-wrap: wrap;
+}
+
+/* Title */
+.slider-title {
+  flex: 0 0 200px;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #111;
+  text-align: left;
+}
+
+/* Image wrapper */
+.slider-image-wrapper {
+  position: relative;
+  flex: 1 1 800px;  /* grow to take remaining space */
+  max-width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* Image */
+.slider-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+}
+
+/* Info overlay */
+.slider-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.65);
+  color: white;
+  padding: 1.2rem 1.5rem;
+  width: 100%;
+}
+
+/* Text styles */
+.slider-price {
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.slider-description {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin-top: 0.3rem;
+}
+
+/* Arrows */
+.slider-arrows {
+  display: flex;
+  gap: 0.75rem;
+  margin-left: auto;
+}
+
+.arrow-btn {
+  background: rgba(0, 0, 0, 0.08);
+  border: none;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-btn:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+/* Dots */
+.slider-dots {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  margin: 0 6px;
+}
+
+/* Save button */
+.slider-save {
+  position: absolute;
+  bottom: 16px;
+  right: 24px;
+  font-size: 1rem;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .slider-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .slider-title {
+    flex: none;
+    text-align: center;
+  }
+
+  .slider-arrows {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .slider-save {
+    position: static;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .slider-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .slider-title {
+    font-size: 1.4rem;
+  }
+
+  .slider-image {
+    aspect-ratio: 4 / 3;
+  }
+}

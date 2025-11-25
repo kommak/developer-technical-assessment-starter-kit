@@ -1,0 +1,110 @@
+/* Footer.css */
+
+.footer {
+  background: linear-gradient(90deg, #f7c04a, #f6a928);
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Top Section */
+.footer-top {
+  display: flex;
+  flex-wrap: wrap; /* allow items to wrap on smaller screens */
+  padding: 40px 60px;
+  gap: 40px;
+  background: linear-gradient(90deg, #f7c04a, #f6a928);
+  align-items: flex-start;
+}
+
+.footer-logo {
+  font-size: 48px;
+  font-weight: bold;
+  flex: 1 1 100%; /* take full width on small screens */
+  user-select: none;
+  filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.4));
+}
+
+.footer-description {
+  flex: 2 1 100%; /* full width on small screens */
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: 20px; /* space below logo */
+}
+
+.footer-contact {
+  flex: 1 1 100%; /* full width on small screens */
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 20px;
+  white-space: normal; /* allow wrapping */
+}
+
+/* Bottom Section */
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap; /* stack columns on small screens */
+  padding: 30px 60px;
+  background: linear-gradient(90deg, #f7c04a, #f6a928);
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex: 1 1 200px; /* min width of 200px, shrink if needed */
+  margin-bottom: 20px; /* space when stacked */
+}
+
+.footer-column h4 {
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+  cursor: default;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+  .footer-top,
+  .footer-bottom {
+    padding: 20px 30px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-logo {
+    font-size: 36px;
+  }
+
+  .footer-description,
+  .footer-contact {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-logo {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .footer-description,
+  .footer-contact {
+    text-align: center;
+  }
+
+  .footer-column {
+    text-align: center;
+    flex: 1 1 100%;
+  }
+}
