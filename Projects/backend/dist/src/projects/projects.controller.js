@@ -1,0 +1,68 @@
+"use strict";
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+var _a;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProjectsController = void 0;
+const common_1 = require("@nestjs/common");
+const projects_service_1 = require("./projects.service");
+let ProjectsController = class ProjectsController {
+    projectsService;
+    constructor(projectsService) {
+        this.projectsService = projectsService;
+    }
+    findAll() {
+        return this.projectsService.findAll();
+    }
+    getTopViewed() {
+        return this.projectsService.findTopViewed(6);
+    }
+    findOne(id) {
+        return this.projectsService.findOne(id);
+    }
+    create(project) {
+        return this.projectsService.create(project);
+    }
+};
+exports.ProjectsController = ProjectsController;
+__decorate([
+    (0, common_1.Get)(),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", Promise)
+], ProjectsController.prototype, "findAll", null);
+__decorate([
+    (0, common_1.Get)('top-viewed'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", Promise)
+], ProjectsController.prototype, "getTopViewed", null);
+__decorate([
+    (0, common_1.Get)(':id'),
+    __param(0, (0, common_1.Param)('id')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Number]),
+    __metadata("design:returntype", Promise)
+], ProjectsController.prototype, "findOne", null);
+__decorate([
+    (0, common_1.Post)(),
+    __param(0, (0, common_1.Body)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", Promise)
+], ProjectsController.prototype, "create", null);
+exports.ProjectsController = ProjectsController = __decorate([
+    (0, common_1.Controller)('project'),
+    __metadata("design:paramtypes", [typeof (_a = typeof projects_service_1.ProjectsService !== "undefined" && projects_service_1.ProjectsService) === "function" ? _a : Object])
+], ProjectsController);
+//# sourceMappingURL=projects.controller.js.map
